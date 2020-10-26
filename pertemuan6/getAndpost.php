@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $mahasiswa = [
     [ 
@@ -44,8 +44,9 @@ $mahasiswa = [
     "email" => "ArgusArafah@gmail.com"
 ] ,     
 
-]
+];
 
+$angka = [1,2,3,4,5,6,8,9];
 
 ?>
 
@@ -54,52 +55,17 @@ $mahasiswa = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assosiative Array</title>
+    <title>GET dan POST</title>
 </head>
-
-<style>
-
-li img {
-    width: 150px;
-    height: 150px;
-}
-
-ul li img {
-    transition: 1s ease;
-}
-
-ul:hover li img {
-        transform : rotate(360deg);
-        border-radius: 50%;
-    }
-
-ul {
-    float: left;
-    
-}
-
-</style>
 <body>
+<ul>
+<?php foreach ($mahasiswa as $mhs) :?> 
+    <li>--> <a href="detail.php?nama=<?php echo $mhs["nama"]?>&npm=<?php echo $mhs["npm"]?>&jurusan=<?php echo $mhs["jurusan"]?>&email=<?php echo $mhs["email"]?>&gambar=<?php echo $mhs["gambar"]?>">
 
-<h1>Daftar nama mahasiswa</h1>
-
-<?php
-
-foreach ($mahasiswa as $mhs) :
-
-?>
-
-    <ul>
-    <li><img src="img/<?php echo $mhs["gambar"] ?>"> </li>
-    <li>Nama: <?php echo $mhs["nama"]?></li>
-    <li>Jurusan: <?php echo $mhs["jurusan"]?></li>
-    <li>NIM: <?php echo $mhs["npm"]?></li>
-    <li>E-mail: <?php echo $mhs["email"]?></li>
+    <?php echo $mhs["nama"]?>
     
-    
-    </ul>
-
+    </a></li>
 <?php endforeach?>
-    
+</ul>
 </body>
 </html>
