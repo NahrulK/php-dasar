@@ -9,6 +9,8 @@
 
 <h1>Selamat datang Admin</h1>
 
+<p> Ini adalah halaman login</p>
+
 <a href="login.php">Kembali ke halaman login</a>
 
     
